@@ -64,3 +64,9 @@ SceneShare
 ■ 機能の実装方針予定
 - コンテンツ参照時の画面では、Youtube動画をiframeで表示する。
 - railsでシンプルなCRUD機能を実装する。
+
+■ 使用予定の技術
+- 開発環境: Docker
+- サーバサイド: Ruby on Rails
+- WebAPI: YouTube Data API
+- インフラ: Heroku
