@@ -72,4 +72,4 @@ SceneShare
 - インフラ: Heroku
 
 ■ 画面遷移図
-Figma: https://www.figma.com/file/C6QXkd72sbIH2g7cavQJgy/SceneShare?type=design&node-id=0%3A1&mode=design&t=GGX4O3aEB28pZZC3-1
+Figma: https://www.figma.com/file/C6QXkd72sbIH2g7cavQJgy/FavoriteScenes?type=design&node-id=0%3A1&mode=design&t=TiVL916AZosVIckk-1
