@@ -1,0 +1,8 @@
+h1 UserSessions#new
+p Find me in app/views/user_sessions/new.html.slim
+= form_with url: login_path, method: :post do |f|
+  = f.label :account_name
+  = f.text_field :account_name
+  = f.label :password
+  = f.password_field :password
+  = f.submit 'ログイン'
