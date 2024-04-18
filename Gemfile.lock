@@ -124,6 +124,7 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.6)
     minitest (5.22.3)
     msgpack (1.7.2)
     multi_xml (0.6.0)
@@ -139,6 +140,9 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.1)
+    nokogiri (1.16.4)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.16.4-aarch64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
@@ -229,6 +233,8 @@ GEM
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
     stringio (3.1.0)
+    tailwindcss-rails (2.4.0)
+      railties (>= 6.0.0)
     tailwindcss-rails (2.4.0-aarch64-linux)
       railties (>= 6.0.0)
     temple (0.10.3)
@@ -258,6 +264,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  ruby
 
 DEPENDENCIES
   bootsnap
