@@ -32,3 +32,7 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Ignore docker files
+/Dockerfile
+/docker-compose.yml
