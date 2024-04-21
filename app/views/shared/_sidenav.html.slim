@@ -1,0 +1,61 @@
+.flex.grow.flex-col.overflow-y-auto.border-r.border-b.border-gray-200.bg-white
+  nav.flex.flex-1.flex-col.px-6
+    ul.flex.flex-1.flex-col role='list'
+      li.py-2
+        ul.-mx-2.space-y-1 role='list'
+          li
+            = link_to '#', class: 'hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-700' do
+              = image_tag 'icons/home.svg', class: 'h-6 w-6'
+              .text-sm.my-auto
+                = I18n.t '.sidenav.home', class: 'bg-cyan-700'
+          li
+            = link_to '#', class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
+              = image_tag 'icons/my-contents.svg', class: 'h-6 w-6'
+              .text-sm.my-auto
+                = I18n.t '.sidenav.my-contents'
+          li
+            div
+              button.hover:bg-gray-50.flex.items-center.w-full.text-left.rounded-md.p-2.gap-x-3.text-sm.leading-6.font-semibold.text-gray-700 type='button' id='according-menu-1' aria-controls='sub-menu-1' aria-expanded='false'
+                = image_tag 'icons/play-circle.svg', class: 'h-6 w-6 shrink-0', 'aria-hidden': 'true'
+                .text-sm.my-auto
+                  = I18n.t '.sidenav.explore_scenecollections'
+                = image_tag 'icons/chevron-down.svg', class: 'h-5 w-5 ml-auto shrink-0 chevron', 'aria-hidden': 'true'
+                = image_tag 'icons/chevron-right.svg', class: 'hidden h-5 w-5 ml-auto shrink-0 chevron', 'aria-hidden': 'true'
+              ul.mt-1.px-2 id='sub-menu-1'
+                li
+                  = link_to '全て', '#',  class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                - @categories.each do |category|
+                  li
+                    = link_to category.category_name, '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+              /ul.mt-1.px-2 id='sub-menu-1'
+                li
+                  = link_to 'ゲーム', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to 'IT技術', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to '自己啓発', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to '英語', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to 'トラベル', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to 'スポーツ', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                li
+                  = link_to 'その他', '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+      li
+        ul.-mx-2.space-y-1 role='list'
+          li
+            = link_to '#', class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
+              = image_tag 'icons/account.svg', class: 'h-6 w-6'
+              .text-sm.my-auto
+                = I18n.t '.sidenav.account'
+      li.py-2.border-t.border-b-gray-200.mt-auto
+        ul.-mx-2.space-y-1 role='list'
+          li
+            = link_to I18n.t('.sidenav.terms-of-service'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
+          li
+            = link_to I18n.t('.sidenav.privacy-policy'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
+          li
+            = link_to I18n.t('.sidenav.inquiry'), '#', class: 'flex items-center gap-x-4 px-2 text-sm py-1 text-gray-900 hover:bg-gray-50'
+    footer.text-gray-400.text-xs.py-2
+      | &copy; 2024

@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title App
+    title FavoriteScenes
     meta name="viewport" content="width=device-width,initial-scale=1"
     = csrf_meta_tags
     = csp_meta_tag
@@ -9,13 +9,20 @@ html
     = stylesheet_link_tag "tailwind", "data-turbo-track" => "reload"
     = javascript_importmap_tags
   body
-    = render partial: '/shared/header'
-    - flash.each do |key, message|
-      = message
-  nav
-    - if logged_in?
-      = link_to 'ログアウト', logout_path, data: {turbo_method: :delete}
-    - else
-      = link_to 'ログイン', login_path
-    h1 Hello
-    = yield
+    .flex.min-h-full.flex-col
+      div
+        = render partial: '/shared/header'
+      div
+        .fixed.top-28.sm:top-16.bottom-0.z-50.flex.w-72.flex-col id='side-nav' aria-expanded='true'
+          = render partial: '/shared/sidenav'
+        main.py-10.lg:pl-72
+          .px-4.sm:px-6.lg:px-8
+            - flash.each do |key, message|
+              = message
+            = yield
+    script type='module'
+      | import { sideNavAccordion, subMenuAccordion } from 'application';
+      | document.addEventListener("DOMContentLoaded", function() {
+      |   document.getElementById('sidenav-ope').addEventListener('click', sideNavAccordion);
+      |   document.getElementById('according-menu-1').addEventListener('click', subMenuAccordion);
+      | });

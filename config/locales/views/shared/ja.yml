@@ -1,4 +1,13 @@
 ja:
-  login: 'ログイン'
-  logout: 'ログアウト'
-  signup: '新規登録'
+  header:
+    login: 'ログイン'
+    logout: 'ログアウト'
+    signup: '新規登録'
+  sidenav:
+    home: 'ホーム'
+    explore_scenecollections: 'シーンコレクションを探す'
+    my-contents: 'マイコンテンツ'
+    account: 'アカウント'
+    terms-of-service: '利用規約'
+    privacy-policy: 'プライバシーポリシー'
+    inquiry: 'お問い合わせ'
