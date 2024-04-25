@@ -11,7 +11,7 @@ header
         span.text-2xl.text-cyan-700.font-bold FavoriteScenes
     .flex.flex-1.items-center.justify-end.gap-x-6
       - if logged_in?
-        = link_to (I18n.t '.header.logout'), logout_path, data: {turbo_method: :delete}, class: 'focus-visible :outline rounded-md border border-current bg-white px-3 py-1.5 text-base text-cyan-700 shadow-sm hover:bg-cyan-50 hover:text-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
+        = link_to (t 'pages.header.logout'), logout_path, data: {turbo_method: :delete}, class: 'focus-visible :outline rounded-md border border-current bg-white px-3 py-1.5 text-base text-cyan-700 shadow-sm hover:bg-cyan-50 hover:text-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
       - else
-        = link_to (I18n.t '.header.login'), login_path, class: 'focus-visible :outline rounded-md border border-current bg-white px-3 py-1.5 text-base text-cyan-700 shadow-sm hover:bg-cyan-50 hover:text-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
-        = link_to (I18n.t '.header.signup'), '#', class: 'focus-visible :outline rounded-md bg-cyan-700 px-3 py-1.5 text-base text-white shadow-sm hover:bg-cyan-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
+        = link_to (t 'pages.header.login'), login_path, class: 'focus-visible :outline rounded-md border border-current bg-white px-3 py-1.5 text-base text-cyan-700 shadow-sm hover:bg-cyan-50 hover:text-slate-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'
+        = link_to (t 'pages.header.signup'), new_user_path, class: 'focus-visible :outline rounded-md bg-cyan-700 px-3 py-1.5 text-base text-white shadow-sm hover:bg-cyan-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600'

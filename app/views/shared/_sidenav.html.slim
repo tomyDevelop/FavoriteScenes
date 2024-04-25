@@ -7,18 +7,18 @@
             = link_to '#', class: 'hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-gray-700' do
               = image_tag 'icons/home.svg', class: 'h-6 w-6'
               .text-sm.my-auto
-                = I18n.t '.sidenav.home', class: 'bg-cyan-700'
+                = t 'pages.sidenav.home', class: 'bg-cyan-700'
           li
             = link_to '#', class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
               = image_tag 'icons/my-contents.svg', class: 'h-6 w-6'
               .text-sm.my-auto
-                = I18n.t '.sidenav.my-contents'
+                = t 'pages.sidenav.my-scenecollections'
           li
             div
               button.hover:bg-gray-50.flex.items-center.w-full.text-left.rounded-md.p-2.gap-x-3.text-sm.leading-6.font-semibold.text-gray-700 type='button' id='according-menu-1' aria-controls='sub-menu-1' aria-expanded='false'
                 = image_tag 'icons/play-circle.svg', class: 'h-6 w-6 shrink-0', 'aria-hidden': 'true'
                 .text-sm.my-auto
-                  = I18n.t '.sidenav.explore_scenecollections'
+                  = t 'pages.sidenav.explore_scenecollections'
                 = image_tag 'icons/chevron-down.svg', class: 'h-5 w-5 ml-auto shrink-0 chevron', 'aria-hidden': 'true'
                 = image_tag 'icons/chevron-right.svg', class: 'hidden h-5 w-5 ml-auto shrink-0 chevron', 'aria-hidden': 'true'
               ul.mt-1.px-2 id='sub-menu-1'
@@ -48,14 +48,14 @@
             = link_to '#', class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
               = image_tag 'icons/account.svg', class: 'h-6 w-6'
               .text-sm.my-auto
-                = I18n.t '.sidenav.account'
+                = t 'pages.sidenav.account'
       li.py-2.border-t.border-b-gray-200.mt-auto
         ul.-mx-2.space-y-1 role='list'
           li
-            = link_to I18n.t('.sidenav.terms-of-service'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
+            = link_to t('pages.sidenav.terms-of-service'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
           li
-            = link_to I18n.t('.sidenav.privacy-policy'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
+            = link_to t('pages.sidenav.privacy-policy'), '#', class: 'flex items-center gap-x-4 px-2 py-1 text-sm text-gray-900 hover:bg-gray-50'
           li
-            = link_to I18n.t('.sidenav.inquiry'), '#', class: 'flex items-center gap-x-4 px-2 text-sm py-1 text-gray-900 hover:bg-gray-50'
+            = link_to t('pages.sidenav.inquiry'), '#', class: 'flex items-center gap-x-4 px-2 text-sm py-1 text-gray-900 hover:bg-gray-50'
     footer.text-gray-400.text-xs.py-2
       | &copy; 2024
