@@ -1,0 +1,59 @@
+= form_with model: @user do |f|
+  // エラーメッセージ
+  - if @user.errors.any?
+    .rounded-md.bg-red-50.p-2.mb-2
+      .flex
+        .flex-shrink-0
+          svg.h-5.w-5.text-red-400 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+            path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clip-rule="evenodd"
+        .ml-3
+          p.text-sm.font-medium.text-red-800
+            = t('common.form.msg.validation_errors_count', errors_count: @user.errors.count)
+          .mt-2.text-sm.text-red-700
+            - @user.errors.each do |error|
+              ul.list-disc.space-y-1.pl-5 role="list"
+                li
+                  = error.full_message
+
+  .space-y-12.sm:space-y-16
+    .border-b.border-gray-900/10.sm:space-y-0.sm:divide-y.sm:divide-gray-900/10
+
+      // アカウント名項目
+      .sm:grid.sm:grid-cols-3.sm:items-center.sm:gap-x-4.sm:gap-y-1.py-2.sm:py-6.sm:border-t.sm:border-gray-900/10
+        .flex.items-center.sm:max-w-md
+          span.text-xs.leading-5.text-white.mr-1.mb-0.5.px-1.5.rounded-md.border.border-gray-400.bg-gray-700'
+            = t 'common.form.mandatory'
+          = f.label :account_name, class: 'block text-base font-medium leading-6 text-gray-900'
+        .mt-2.sm:col-span-2.sm:mt-0
+          .flex.rounded-md.shadow-sm.ring-1.ring-inset.ring-gray-300.focus-within:ring-2.focus-within:ring-inset.focus-within:ring-indigo-600.sm:max-w-md
+            = f.text_field :account_name, class: 'block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6', autocomplete: 'account_name'
+        .text-xs.pt-0.5.text-gray-600.sm:col-start-2.sm:col-span-2.sm:max-w-md
+          = t 'users.form.account_name.caution_note'
+
+      // パスワード項目
+      .sm:grid.sm:grid-cols-3.sm:items-center.sm:gap-x-4.sm:gap-y-1.py-2.sm:py-6
+        .flex.items-center.sm:max-w-md
+          span.text-xs.leading-5.text-white.mr-1.mb-0.5.px-1.5.rounded-md.border.border-gray-400.bg-gray-700'
+            = t 'common.form.mandatory'
+          = f.label :password, class: 'block text-base font-medium leading-6 text-gray-900'
+        .mt-2.sm:col-span-2.sm:mt-0
+          .flex.rounded-md.shadow-sm.ring-1.ring-inset.ring-gray-300.focus-within:ring-2.focus-within:ring-inset.focus-within:ring-indigo-600.sm:max-w-md
+            = f.password_field :password, class: 'block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+        .text-xs.pt-0.5.text-gray-600.sm:col-start-2.sm:col-span-2.sm:max-w-md
+          = t 'users.form.password.caution_note'
+
+      // パスワード確認項目
+      .sm:grid.sm:grid-cols-3.sm:items-center.sm:gap-x-4.sm:gap-y-1.py-2.sm:py-6
+        .flex.items-center.sm:max-w-md
+          span.text-xs.leading-5.text-white.mr-1.mb-0.5.px-1.5.rounded-md.border.border-gray-400.bg-gray-700'
+            = t 'common.form.mandatory'
+          = f.label :password_confirmation, class: 'block text-base font-medium leading-6 text-gray-900'
+        .mt-2.sm:col-span-2.sm:mt-0
+          .flex.rounded-md.shadow-sm.ring-1.ring-inset.ring-gray-300.focus-within:ring-2.focus-within:ring-inset.focus-within:ring-indigo-600.sm:max-w-md
+            = f.password_field :password_confirmation, class: 'block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+
+  // ボタン
+  .mt-6.flex.items-center.justify-end.gap-x-6
+    .text-right.sm:col-span-1.sm:col-end-4
+      span.rounded-md.bg-indigo-600.px-3.py-2.text-sm.font-semibold.text-white.shadow-sm.hover:bg-indigo-500.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-600
+        = f.submit t 'common.form.button.user_create_next'

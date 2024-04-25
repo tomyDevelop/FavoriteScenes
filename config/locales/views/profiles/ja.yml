@@ -1,0 +1,5 @@
+ja:
+  profiles:
+    new:
+      page_heading: 'プロフィール'
+      page_short_description: 'プロフィールは他のユーザーにも公開されます。'

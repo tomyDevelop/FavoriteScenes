@@ -1,0 +1,38 @@
+ja:
+  common:
+    form:
+      msg:
+        validation_errors_count: 'エラーが%{errors_count}個あります。修正してください。'
+      optional: '任意'
+      mandatory: '必須'
+      button:
+        create: '登録'
+        user_create_next: 'プロフィールの登録へ進む'
+  users:
+    form:
+      msg:
+        success: 'アカウント登録に成功しました。'
+        failed: 'アカウントの登録に失敗しました。'
+      account_name:
+        caution_note: 'ログイン時に使用するIDで他のユーザーには表示されません。他のユーザーが利用しているIDは使用できません。半角英数字が使用できます。'
+      password:
+        caution_note: '半角英数字と特定の記号（@, !, &, -）が使用できます。4桁以上である必要があります。'
+  profiles:
+    form:
+      msg:
+        success: 'プロフィール登録に成功しました。'
+        failed: 'プロフィールの登録に失敗しました。'
+      nickname:
+        caution_note: '他のユーザーに公開されます。'
+      account_name:
+        caution_note: 'こちらは他のユーザーに公開されません。'
+  activerecord:
+    attributes:
+      user:
+        account_name: 'アカウント名'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+      profile:
+        nickname: 'ニックネーム'
+      interest:
+        interest: '興味'
