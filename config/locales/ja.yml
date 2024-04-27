@@ -1,5 +1,7 @@
 ja:
   common:
+    msg:
+      not_authenticated: 'ログインが必要です。'
     form:
       msg:
         validation_errors_count: 'エラーが%{errors_count}個あります。修正してください。'
@@ -8,6 +10,8 @@ ja:
       button:
         create: '登録'
         user_create_next: 'プロフィールの登録へ進む'
+        scene_collection_next: '詳細設定へ進む'
+        video_check: '動画チェック'
   users:
     form:
       msg:
@@ -26,6 +30,18 @@ ja:
         caution_note: '他のユーザーに公開されます。'
       account_name:
         caution_note: 'こちらは他のユーザーに公開されません。'
+  scene_collections:
+    form:
+      msg:
+        success: 'シーンコレクション作成に成功しました。'
+        failed: 'シーンコレクション作成に失敗しました。'
+        api_failed: 'ビデオが見つからなかった、もしくはAPIエラーが発生しました。'
+      video_title:
+        placeholder: '自動入力'
+        caution_note: '動画チェックすると自動入力されます。'
+      channel_name:
+        placeholder: '自動入力'
+        caution_note: '動画チェックすると自動入力されます。'
   user_sessions:
     form:
       msg:
@@ -44,3 +60,10 @@ ja:
         nickname: 'ニックネーム'
       interest:
         interest: '興味'
+      scene_collection:
+        video_id: 'YouTube動画ID'
+        video_title: 'YouTube動画タイトル'
+        channel_name: 'チャンネル名'
+        title: 'タイトル'
+        short_description: '簡単な説明'
+        category: 'カテゴリ'

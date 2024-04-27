@@ -36,3 +36,6 @@
 # Ignore docker files
 /Dockerfile
 /docker-compose.yml
+
+# Ignore .env
+/.env

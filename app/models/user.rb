@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_one :profile, dependent: :destroy
   has_and_belongs_to_many :interests, dependent: :delete_all
+  has_many :scene_collections, dependent: :destroy
 
   VALID_PASSWORD_REGEX = /\A[a-zA-Z0-9@!&-]{4,}\z/
 

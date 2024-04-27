@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_24_081437) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_26_132307) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,6 +43,20 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_24_081437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "scene_collections", force: :cascade do |t|
+    t.string "video_id", null: false
+    t.string "video_title"
+    t.string "channel_name"
+    t.string "title", null: false
+    t.text "short_description"
+    t.bigint "category_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_scene_collections_on_category_id"
+    t.index ["user_id"], name: "index_scene_collections_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
