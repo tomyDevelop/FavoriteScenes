@@ -10,12 +10,12 @@ html.h-full
     = javascript_importmap_tags
   body
     .flex.min-h-full.flex-col
-      div
+      .fixed.w-full
         = render partial: '/shared/header'
       div
         .fixed.top-28.sm:top-16.bottom-0.z-50.flex.w-72.flex-col id='side-nav' aria-expanded='true'
           = render partial: '/shared/sidenav'
-        main.py-4.lg:pl-72
+        main.pt-28.sm:pt-16.lg:pl-72
           .px-4
             = render partial: '/shared/flash_messages'
             = yield

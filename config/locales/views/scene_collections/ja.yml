@@ -1,0 +1,6 @@
+ja:
+  scene_collections:
+    new:
+      page_heading: 'シーンコレクション作成'
+    edit:
+      page_heading: 'シーンコレクション編集'

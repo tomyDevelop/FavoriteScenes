@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
+
   def new
     @user = User.find(session[:user_id_tmp])
     @profile = @user.build_profile
