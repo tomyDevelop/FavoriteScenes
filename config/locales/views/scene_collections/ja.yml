@@ -4,3 +4,5 @@ ja:
       page_heading: 'シーンコレクション作成'
     edit:
       page_heading: 'シーンコレクション編集'
+    show:
+      page_heading: 'シーンコレクション'

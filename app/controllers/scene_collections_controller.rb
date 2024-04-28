@@ -1,6 +1,8 @@
 require 'google/apis/youtube_v3'
 
 class SceneCollectionsController < ApplicationController
+  skip_before_action :require_login, only: [:show]
+
   def new
     @scene_collection = SceneCollection.new
   end
@@ -29,8 +31,10 @@ class SceneCollectionsController < ApplicationController
 
   def edit
     @scene_collection = SceneCollection.find(params[:id])
-    @scene_collection.title = ''
-    @scene_collection.category_id = ''
+  end
+
+  def show
+    @scene_collection = SceneCollection.find(params[:id])
   end
 
   private
