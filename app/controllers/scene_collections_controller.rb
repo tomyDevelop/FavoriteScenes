@@ -1,7 +1,7 @@
 require 'google/apis/youtube_v3'
 
 class SceneCollectionsController < ApplicationController
-  skip_before_action :require_login, only: [:show]
+  skip_before_action :require_login, only: [:show, :index]
 
   def new
     @scene_collection = SceneCollection.new
@@ -14,6 +14,7 @@ class SceneCollectionsController < ApplicationController
       if video_info
         @scene_collection.video_title = video_info.snippet.title
         @scene_collection.channel_name = video_info.snippet.channel_title
+        @scene_collection.video_thumbnail_url = video_info.snippet.thumbnails.default.url
       else
         flash.now[:alert] = t 'scene_collections.form.msg.api_failed'
       end
@@ -37,6 +38,9 @@ class SceneCollectionsController < ApplicationController
     @scene_collection = SceneCollection.find(params[:id])
   end
 
+  def index
+    @scene_collections = SceneCollection.all.order('created_at DESC')
+  end
   private
 
   def set_video_id
@@ -51,6 +55,6 @@ class SceneCollectionsController < ApplicationController
   end
 
   def scene_collection_params
-    params.require(:scene_collection).permit(:video_id, :video_title, :channel_name, :title, :short_description, :category_id)
+    params.require(:scene_collection).permit(:video_id, :video_title, :channel_name, :title, :short_description, :category_id, :video_thumbnail_url)
   end
 end
