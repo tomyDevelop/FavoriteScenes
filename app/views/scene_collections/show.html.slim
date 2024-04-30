@@ -142,7 +142,9 @@
 
 script type='module'
   | import { player } from 'controllers/scene_collections_show';
-  |
+  | 
+  | document.addEventListener("turbo:load", function() {
+  | });
 /
   | document.addEventListener("turbo:load", function() {
   |   const playerElement = document.getElementById('player');

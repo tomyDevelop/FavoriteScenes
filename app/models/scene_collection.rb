@@ -9,4 +9,12 @@ class SceneCollection < ApplicationRecord
     length: { maximum: 100 }
   validates :short_description,
     length: { maximum: 400 }
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["category_id", "channel_name", "created_at", "short_description", "title", "updated_at", "user_id", "video_title"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["category", "user"]
+  end
 end
