@@ -39,8 +39,15 @@ class SceneCollectionsController < ApplicationController
   end
 
   def index
-    @scene_collections = SceneCollection.all.order('created_at DESC')
+    @q =SceneCollection.ransack(params[:q])
+    @scene_collections = @q.result.order('created_at DESC')
   end
+
+  def my_index
+    @q =SceneCollection.ransack(params[:q])
+    @scene_collections = @q.result.where(user_id: current_user.id).order('created_at DESC')
+  end
+
   private
 
   def set_video_id

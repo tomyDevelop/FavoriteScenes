@@ -3,5 +3,5 @@
     h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900.mb-2.sm:mb-4
       = t '.page_heading'
 
-    = render partial: 'scene_collections/search_form', locals: { search_path: scene_collections_path }
+    = render partial: 'scene_collections/search_form', locals: { search_path: my_scene_collections_path }
     = render partial: 'scene_collections/scene_collection', locals: { type: 'index', scene_collections: @scene_collections }

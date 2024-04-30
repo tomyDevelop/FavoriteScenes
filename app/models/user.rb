@@ -18,4 +18,11 @@ class User < ApplicationRecord
   validates :password_confirmation,
     presence: true, on: :create
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["id"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["profile"]
+  end
 end

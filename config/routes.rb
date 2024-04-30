@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :interests, only: ['create']
   end
   resources :scene_collections, only: ['new', 'create', 'edit', 'update', 'show', 'index']
+  get 'my_scene_collections', to: 'scene_collections#my_index'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'

@@ -6,3 +6,9 @@ ja:
       page_heading: 'シーンコレクション編集'
     index:
       page_heading: 'シーンコレクション一覧'
+      no_scene_collection: 'シーンコレクションがありません'
+      search_form:
+        user_profile_nickname_cont_placeholder: '[投稿者]検索キーワード'
+        short_description_cont_placeholder: '[簡単な説明]検索キーワード'
+    my_index:
+      page_heading: 'マイシーンコレクション一覧'

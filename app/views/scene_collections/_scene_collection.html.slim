@@ -1,2 +1,7 @@
-= render 'form'
-/= render 'edit_form'
+-if type === 'index'
+  -if scene_collections
+    = render partial: 'cards', locals: { scene_collections: scene_collections }
+  - else
+    p = t '.no_scene_collection'
+-else
+  = render 'form'

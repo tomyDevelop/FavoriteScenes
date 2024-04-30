@@ -10,7 +10,7 @@
                 = t 'pages.sidenav.home', class: 'bg-cyan-700'
           - if logged_in?
             li
-              = link_to '#', class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
+              = link_to my_scene_collections_path, class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
                 = image_tag 'icons/my-contents.svg', class: 'h-6 w-6'
                 .text-sm.my-auto
                   = t 'pages.sidenav.my-scenecollections'
@@ -27,7 +27,7 @@
                   = link_to '全て', scene_collections_path, class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
                 - @categories.each do |category|
                   li
-                    = link_to category.category_name, '#', class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
+                    = link_to category.category_name, scene_collections_path(q: { category_id_eq: category.id }), class: 'hover:bg-gray-50 block rounded-md py-2 pr-2 pl-9 text-sm leading-6 text-gray-700'
       - if logged_in?
         li
           ul.-mx-2.space-y-1 role='list'
