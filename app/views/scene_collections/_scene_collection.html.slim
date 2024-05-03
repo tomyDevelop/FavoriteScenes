@@ -1,7 +1,7 @@
--if type === 'index'
-  -if scene_collections
+- if type === 'index'
+  - if scene_collections
     = render partial: 'cards', locals: { scene_collections: scene_collections }
   - else
     p = t '.no_scene_collection'
--else
-  = render 'form'
+- else
+  = render partial: 'scene_collection_form', locals: { type: type }
