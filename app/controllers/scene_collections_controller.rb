@@ -22,9 +22,9 @@ class SceneCollectionsController < ApplicationController
     else
       @scene_collection = current_user.scene_collections.build(scene_collection_params)
       if @scene_collection.save
-        redirect_to edit_scene_collection_path(@scene_collection.id), notice: t('scene_collections.form.msg.success')
+        redirect_to edit_scene_collection_path(@scene_collection.id), notice: t('scene_collections.form.msg.create_success')
       else
-        flash.now[:alert] = t 'scene_collections.form.msg.failed'
+        flash.now[:alert] = t 'scene_collections.form.msg.create_failed'
         render :new, status: :see_other
       end
     end
@@ -32,6 +32,19 @@ class SceneCollectionsController < ApplicationController
 
   def edit
     @scene_collection = SceneCollection.find(params[:id])
+    @scenes = @scene_collection.scenes.order('seconds')
+    authorize @scene_collection
+  end
+
+  def update
+    @scene_collection = SceneCollection.find(params[:id])
+    @scenes = @scene_collection.scenes.order('seconds')
+    if @scene_collection.update(scene_collection_params)
+      redirect_to scene_collection_path(@scene_collection.id), notice: t('scene_collections.form.msg.update_success')
+    else
+      flash.now[:alert] = t 'scene_collections.form.msg.update_failed'
+      render :edit, status: :see_other
+    end
   end
 
   def show

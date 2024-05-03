@@ -1,6 +1,8 @@
 class SceneCollection < ApplicationRecord
   belongs_to :category
   belongs_to :user
+  has_many :scenes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :video_id,
     presence: true

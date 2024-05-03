@@ -9,8 +9,9 @@ ja:
       mandatory: '必須'
       button:
         create: '登録'
+        update: '更新'
         user_create_next: 'プロフィールの登録へ進む'
-        scene_collection_next: '詳細設定へ進む'
+        scene_collection_next: 'シーンコレクションを登録'
         video_check: '動画チェック'
   users:
     form:
@@ -33,8 +34,10 @@ ja:
   scene_collections:
     form:
       msg:
-        success: 'シーンコレクション作成に成功しました。'
-        failed: 'シーンコレクション作成に失敗しました。'
+        create_success: 'シーンコレクション作成に成功しました。'
+        create_failed: 'シーンコレクション作成に失敗しました。'
+        update_success: 'シーンコレクション更新に成功しました。'
+        update_failed: 'シーンコレクション更新に失敗しました。'
         api_failed: 'ビデオが見つからなかった、もしくはAPIエラーが発生しました。'
       video_title:
         placeholder: '自動入力'
@@ -66,10 +69,19 @@ ja:
         channel_name: 'チャンネル名'
         title: 'タイトル'
         short_description: '簡単な説明'
-        category: 'カテゴリ'
+        category_id: 'カテゴリ'
+      scene:
+        seconds: '経過秒数'
+        highlight: '見どころ'
   time:
     formats:
       default: '%Y/%m/%d %H:%M:%S'
       short: '%Y/%m/%d %H:%M'
       date: '%Y/%m/%d'
       long: '%Y年%m月%d日 %H時%M分%S秒'
+  pundit:
+    default: 'この操作を実行する権限がありません。'
+    scene_collection_policy:
+      edit?: 'このシーンコレクションを編集する権限がありません。'
+      update?: 'このシーンコレクションを編集する権限がありません。'
+      destroy?: 'このシーンコレクションを削除する権限がありません。'

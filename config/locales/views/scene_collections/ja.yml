@@ -4,6 +4,9 @@ ja:
       page_heading: 'シーンコレクション作成'
     edit:
       page_heading: 'シーンコレクション編集'
+      scene_add_heading: 'シーン'
+      scene_add_button: 'シーン追加'
+      scene_index_heading: '追加されたシーン'
     index:
       page_heading: 'シーンコレクション一覧'
       no_scene_collection: 'シーンコレクションがありません'

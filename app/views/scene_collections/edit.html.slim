@@ -1,3 +1,8 @@
-.pb-2
-  h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900
-    = t '.page_heading'
+.mx-auto.max-w-7xl.px-1.sm:px-2.lg:px-8
+  .mx-auto.max-w-4xl.mb-4
+
+    .pb-2
+      h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900
+        = t '.page_heading'
+
+    = render @scene_collection, type: 'edit'
