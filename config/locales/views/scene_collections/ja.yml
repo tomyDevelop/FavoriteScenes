@@ -15,3 +15,5 @@ ja:
         short_description_cont_placeholder: '[簡単な説明]検索キーワード'
     my_index:
       page_heading: 'マイシーンコレクション一覧'
+    cards:
+      destroy_confirm: '本当に削除しますか？'
