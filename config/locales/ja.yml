@@ -38,6 +38,7 @@ ja:
         create_failed: 'シーンコレクション作成に失敗しました。'
         update_success: 'シーンコレクション更新に成功しました。'
         update_failed: 'シーンコレクション更新に失敗しました。'
+        destroy_success: 'シーンコレクション削除に成功しました。'
         api_failed: 'ビデオが見つからなかった、もしくはAPIエラーが発生しました。'
       video_title:
         placeholder: '自動入力'

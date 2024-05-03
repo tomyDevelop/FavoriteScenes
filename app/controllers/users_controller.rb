@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     else
       # redirect_to new_user_path, alert: t('users.form.msg.failed')
       flash.now[:alert] = t('users.form.msg.failed')
-      render :new, status: :see_other
+      render :new, status: :unprocessable_entity
     end
   end
 

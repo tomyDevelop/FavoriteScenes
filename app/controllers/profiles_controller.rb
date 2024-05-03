@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
     else
       @interests = Interest.order(:sort_key)
       flash.now[:alert] = t('profiles.form.msg.failed')
-      render :new, status: :see_other
+      render :new, status: :unprocessable_entity
     end
   end
 
