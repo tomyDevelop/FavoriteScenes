@@ -33,6 +33,7 @@ class SceneCollectionsController < ApplicationController
   def edit
     @scene_collection = SceneCollection.find(params[:id])
     @scenes = @scene_collection.scenes.order('seconds')
+    @scene = @scene_collection.scenes.build
     authorize @scene_collection
   end
 
@@ -50,6 +51,7 @@ class SceneCollectionsController < ApplicationController
 
   def show
     @scene_collection = SceneCollection.find(params[:id])
+    @scenes = @scene_collection.scenes.order('seconds')
   end
 
   def index
