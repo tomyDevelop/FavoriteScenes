@@ -149,6 +149,11 @@ const init = function() {
       }
     }
   });
+
+  //const new_scene = document.getElementById('new_scene');
+  //new_scenes.addEventListener('turbo:frame-load', function() {
+  //  console.log('hello');
+  //});
 }
 
 export default init;
