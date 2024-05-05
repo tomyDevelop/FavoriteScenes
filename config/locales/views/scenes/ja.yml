@@ -1,0 +1,14 @@
+ja:
+  scenes:
+    form:
+      hours: '時'
+      minutes: '分'
+      seconds: '秒'
+      seek_seconds: '秒'
+      time_caution: '時間を指定すると経過秒数に自動入力されます。'
+      seek_seconds_caution: '時間を指定すると経過秒数に自動入力されます。直接入力することも可能です。'
+      seek_seconds_caution_readonly: '経過時間は編集できません。経過時間を編集したい場合は、シーンを再作成してください。'
+      convert_seconds: '秒数変換'
+    show:
+      scene_unit:
+        destroy_confirm: '本当に削除しますか？'

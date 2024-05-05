@@ -5,13 +5,19 @@ ja:
     edit:
       page_heading: 'シーンコレクション編集'
       scene_add_button: 'シーン追加'
+      scene_create_button: '追加'
+      scene_update_button: '更新'
       scene_index_heading: '追加されたシーン'
+      create_cancel_button: 'キャンセル'
+      update_cancel_button: 'キャンセル'
       scene_add_heading: 'お気に入りシーンの追加'
     show:
       favorite_scenes_heading: 'お気に入りシーン'
       short_description_heading: '簡単な説明'
       comments_heading: 'コメント'
       info_heading: '投稿情報'
+    scene_index:
+      destroy_confirm: '本当に削除しますか？'
     index:
       page_heading: 'シーンコレクション一覧'
       no_scene_collection: 'シーンコレクションがありません'
@@ -22,11 +28,3 @@ ja:
       page_heading: 'マイシーンコレクション一覧'
     cards:
       destroy_confirm: '本当に削除しますか？'
-    scene_form:
-      hours: '時'
-      minutes: '分'
-      seconds: '秒'
-      seek_seconds: '秒'
-      time_caution: '時間を指定すると経過秒数に自動入力されます。'
-      seek_seconds_caution: '時間を指定すると経過秒数に自動入力されます。直接入力することも可能です。'
-      convert_seconds: '秒数変換'

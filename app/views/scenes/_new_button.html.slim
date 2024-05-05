@@ -1,0 +1,6 @@
+= turbo_frame_tag 'new_scene' do
+  .relative.font-normal
+    .absolute.inset-0.flex.items-center aria-hidden="true"
+      .w-full.border-t.border-gray-300
+    .relative.flex.justify-center
+      =link_to t('scene_collections.edit.scene_add_button'), new_scene_collection_scene_path(@scene_collection), class: 'inline-flex items-center rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50'

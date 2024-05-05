@@ -94,14 +94,4 @@
           = f.submit t 'common.form.button.update'
 
 - if type === 'edit'
-  .pb-2
-    h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900
-      = t 'scene_collections.edit.scene_add_heading'
-  .space-y-12.border-b.border-gray-900/10.pb-4
-    .mt-2.grid.grid-cols-1.gap-x-6.gap-y-8.sm:grid-cols-6
-      .sm:col-span-full
-        = render 'scene_form'
-
-script type='module'
-  | import init from 'controllers/scenes';
-  | init();
+  = render 'scenes/index', action: ''

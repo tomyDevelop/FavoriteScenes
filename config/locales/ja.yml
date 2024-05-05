@@ -2,6 +2,7 @@ ja:
   common:
     msg:
       not_authenticated: 'ログインが必要です。'
+      destroy_confirm: '本当に削除しますか？'
     form:
       msg:
         validation_errors_count: 'エラーが%{errors_count}個あります。修正してください。'
