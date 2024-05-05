@@ -1,6 +1,6 @@
 - if logged_in?
   .min-w-0.flex-1.mx-2.mb-6
-    = render 'comments/form', comment: @comment, scene_collection: @scene_collection
+    = render 'comments/form', comment: @comment, scene_collection: @scene_collection, action: 'new'
 .mx-2.border-y.border-gray-200.mb-2.py-2.flex.flex-col.space-y-3#comments
   - @comments.each do |comment|
     = render 'comments/comment_unit', comment: comment, scene_collection: @scene_collection
