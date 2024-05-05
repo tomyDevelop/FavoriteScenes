@@ -11,6 +11,7 @@ ja:
       button:
         create: '登録'
         update: '更新'
+        submit: '送信'
         user_create_next: 'プロフィールの登録へ進む'
         scene_collection_next: 'シーンコレクションを登録'
         video_check: '動画チェック'
@@ -32,6 +33,12 @@ ja:
         caution_note: '他のユーザーに公開されます。'
       account_name:
         caution_note: 'こちらは他のユーザーに公開されません。'
+  comments:
+    form:
+      msg:
+        create_success: 'コメントを投稿しました。'
+        update_success: 'コメントを編集しました。'
+        destroy_success: 'コメントを削除しました。'
   scene_collections:
     form:
       msg:
@@ -75,6 +82,8 @@ ja:
       scene:
         seconds: '経過秒数'
         highlight: '見どころ'
+      comment:
+        body: 'コメント内容'
   time:
     formats:
       default: '%Y/%m/%d %H:%M:%S'

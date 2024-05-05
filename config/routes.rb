@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :scene_collections do
     resources :scenes
+    resources :comments, only: ['create', 'edit', 'update', 'destroy']
   end
   get 'my_scene_collections', to: 'scene_collections#my_index'
   get 'login', to: 'user_sessions#new'
