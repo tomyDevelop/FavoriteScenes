@@ -12,6 +12,7 @@ ja:
         create: '登録'
         update: '更新'
         submit: '送信'
+        cancel: 'キャンセル'
         user_create_next: 'プロフィールの登録へ進む'
         scene_collection_next: 'シーンコレクションを登録'
         video_check: '動画チェック'
@@ -39,6 +40,7 @@ ja:
         create_success: 'コメントを投稿しました。'
         update_success: 'コメントを編集しました。'
         destroy_success: 'コメントを削除しました。'
+        no_comments: 'コメントはありません'
   scene_collections:
     form:
       msg:

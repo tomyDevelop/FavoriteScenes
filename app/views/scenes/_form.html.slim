@@ -82,12 +82,12 @@
     .text-right.sm:col-span-1.sm:col-end-4.space-x-2
       - if action === 'new'
         span.rounded-md.bg-white.border.px-3.py-2.text-sm.font-semibold.text-gray-600.shadow-sm.hover:bg-gray-500.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-gray-600
-          = link_to t('scene_collections.edit.create_cancel_button'), scene_collection_scenes_path
+          = link_to t('common.form.button.cancel'), scene_collection_scenes_path
         span.rounded-md.bg-indigo-600.px-3.py-2.text-sm.font-semibold.text-white.shadow-sm.hover:bg-indigo-500.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-600
           = a.submit t('scene_collections.edit.scene_create_button'), id: 'scene-add-btn'
       - else
         span.rounded-md.bg-white.border.px-3.py-2.text-sm.font-semibold.text-gray-600.shadow-sm.hover:bg-gray-500.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-gray-600
-          = link_to t('scene_collections.edit.update_cancel_button'), scene_collection_scene_path
+          = link_to t('common.form.button.cancel'), scene_collection_scene_path
         span.rounded-md.bg-indigo-600.px-3.py-2.text-sm.font-semibold.text-white.shadow-sm.hover:bg-indigo-500.focus-visible:outline.focus-visible:outline-2.focus-visible:outline-offset-2.focus-visible:outline-indigo-600
           = a.submit t('scene_collections.edit.scene_update_button'), id: 'scene-add-btn'
 
