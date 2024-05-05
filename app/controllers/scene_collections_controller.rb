@@ -52,6 +52,8 @@ class SceneCollectionsController < ApplicationController
   def show
     @scene_collection = SceneCollection.find(params[:id])
     @scenes = @scene_collection.scenes.order('seconds')
+    @comment = @scene_collection.comments.build
+    @comments = @scene_collection.comments.order('created_at DESC')
   end
 
   def index
