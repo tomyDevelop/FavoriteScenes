@@ -1,4 +1,54 @@
-.mx-auto.max-w-7xl.px-1.sm:px-2.lg:px-8
-  .mx-auto.max-w-4xl.mb-4
-    .pb-2
-      h1 Pages#top
+.relative.isolate.overflow-hidden.border-b.mb-10
+  .mx-auto.max-w-7xl.pb-10.pt-5.sm:grid.sm:grid-cols-6.sm:gap-x-8.sm:px-0.lg:py-10
+    .px-6.sm:px-0.sm:pt-4.sm:col-span-full.lg:col-span-2.border-b.pb-6.lg:pb-0.lg:border-none
+      .mx-auto.max-w-md
+        .max-w-lg.flex.flex-col
+          .flex.flex-row.items-center.space-x-2.justify-center.mb-5.sm:mb-8
+            = image_tag 'logo.svg', class: 'h-9 w-9'
+            .text-2xl.text-cyan-700.font-bold FavoriteScenes
+          .space-y-2.sm:space-y-3.mb-5.sm:mb-8
+            h1.text-2xl.font-bold.tracking-tight.text-gray-900.sm:text-3xl.text-center =t('.catch_phrase_1')
+            h1.text-2xl.font-bold.tracking-tight.text-gray-900.sm:text-3xl.text-center =t('.catch_phrase_2')
+            h1.text-2xl.font-bold.tracking-tight.text-gray-900.sm:text-3xl.text-center =t('.catch_phrase_3')
+          = link_to t('.view_new'), scene_collections_path, class: 'rounded-md bg-indigo-600 px-3.5 py-2.5 mx-auto text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-1'
+          .text-xs.text-center.text-gray-600 =t('.view_annotation')
+    .sm:mx-auto.sm:max-w-2xl.sm:mx-0.sm:mt-10.lg:mt-0.sm:col-span-full.sm:grid.sm:grid-cols-5.sm:gap-x-2.lg:col-span-4
+      .sm:mx-0.sm:mt-0.sm:col-span-2.flex.flex-col.items-center.lg:items-start
+        .h-20.place-content-center
+          .bg-indigo-50.py-2.px-4.rounded-lg.shadow-lg.relative class='w-[fit-content]'
+            .text-gray-700.text-base.font-medium.leading-5 =t('.speech_bubble_1')
+            .text-gray-700.text-base.font-medium.leading-5 =t('.speech_bubble_2')
+            .absolute.top-9.left-3/4.-ml-2.5.w-5.h-5.bg-indigo-50.rotate-45.transform.origin-bottom-left
+        .h-24.flex.flex-row
+          .w-8.text-2xl.leading-5.font-thin.text-right.mt-2.mr-1 &#9313;
+          .self-center.mb-1
+            .text-gray-700.text-base.leading-5 =t('.procedure_2-1')
+            .text-gray-700.text-base.leading-5 =t('.procedure_2-2')
+            .text-gray-700.text-base.leading-5 =t('.procedure_2-3')
+            .text-xs.text-gray-600 =t('.procedure_2_annotation')
+        .h-40.relative
+          = image_tag 'top_image.png', class: 'max-h-40'
+          = image_tag 'share_arrow.png', class: 'absolute h-12 w-12 top-4 right-0 hidden sm:block'
+        .h-20.flex.flex-row
+          .w-8.text-2xl.leading-5.font-thin.text-right.mt-2.mr-1 &#9312;
+          div
+            .text-gray-700.text-base.leading-5.mt-2 =t('.procedure_1-1')
+            .text-gray-700.text-base.leading-5 =t('.procedure_1-2')
+      .sm:mx-auto.sm:max-w-2xl.sm:mx-0.sm:mt-0.sm:col-span-3.p-1
+        .text-xs =t('.sample_heading')
+        = image_tag 'top_sample.png', class: 'border border-gray-400 rounded-sm pl-6 pr-1 pb-1 pt-2'
+
+.px-2.mb-10.mx-auto.max-w-7xl
+  .flex.flex-col.justify-center.mb-4
+    .h1.text-xl.text-center.font-bold.text-gray-900.mb-2 =t('.how_to_use')
+    = image_tag 'how_to_use.png', class: 'max-h-56 object-contain'
+  dl.flex.flex-col.sm:flex-row.space-x-0.space-y-2.sm:space-y-0.sm:space-x-4.text-sm.mb-2.sm:justify-center
+    .max-w-xs
+      dt.font-bold =t('.to_share_heading')
+      dd. =t('.to_share_body')
+    .max-w-xs
+      dt.font-bold =t('.to_review_heading')
+      dd =t('.to_review_body')
+    .max-w-xs
+      dt.font-bold =t('.to_learn_English_heading')
+      dd =t('.to_learn_English_body')
