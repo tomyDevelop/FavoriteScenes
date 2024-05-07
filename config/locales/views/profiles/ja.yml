@@ -3,3 +3,5 @@ ja:
     new:
       page_heading: 'プロフィール'
       page_short_description: 'プロフィールは他のユーザーにも公開されます。'
+    edit:
+      page_heading: 'プロフィール編集'

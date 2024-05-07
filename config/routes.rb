@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#top'
-  resources :users, only: ['new', 'create', 'edit', 'update'] do
-    resource :profile, only: ['new', 'create']
+  resources :users, only: ['new', 'create', 'edit', 'update', 'show'] do
+    resource :profile, only: ['new', 'create', 'edit', 'update']
     resources :interests, only: ['create']
   end
   resources :scene_collections do

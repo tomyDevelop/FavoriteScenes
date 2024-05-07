@@ -10,6 +10,7 @@ ja:
       mandatory: '必須'
       button:
         create: '登録'
+        edit: '変更する'
         update: '更新'
         submit: '送信'
         cancel: 'キャンセル'
@@ -19,7 +20,7 @@ ja:
   users:
     form:
       msg:
-        success: 'アカウント登録に成功しました。'
+        success: 'アカウント登録に成功しました。続けてプロフィールを登録してください。'
         failed: 'アカウントの登録に失敗しました。'
       account_name:
         caution_note: 'ログイン時に使用するIDで他のユーザーには表示されません。他のユーザーが利用しているIDは使用できません。半角英数字が使用できます。'
@@ -28,8 +29,10 @@ ja:
   profiles:
     form:
       msg:
-        success: 'プロフィール登録に成功しました。'
+        success: 'プロフィール登録に成功しました。ログインしてください。'
         failed: 'プロフィールの登録に失敗しました。'
+        update_success: 'プロフィール編集に成功しました。'
+        update_failed: 'プロフィールの編集に失敗しました。'
       nickname:
         caution_note: '他のユーザーに公開されます。'
       account_name:
@@ -68,6 +71,7 @@ ja:
     attributes:
       user:
         account_name: 'アカウント名'
+        email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
       profile:

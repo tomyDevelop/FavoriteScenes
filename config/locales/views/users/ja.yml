@@ -2,3 +2,13 @@ ja:
   users:
     new:
       page_heading: 'アカウント登録'
+    show:
+      page_heading: 'アカウント'
+    account_info:
+      section_heading: 'アカウント情報'
+      cannot_edit: '変更できません'
+      password: '非表示'
+    profile_info:
+      section_heading: 'プロフィール'
+      cannot_edit: '変更できません'
+      password: '非表示'
