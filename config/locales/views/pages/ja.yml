@@ -1,0 +1,25 @@
+ja:
+  pages:
+    top:
+      catch_phrase_1: 'YouTubeで見つけた'
+      catch_phrase_2: 'お気に入りシーンを'
+      catch_phrase_3: 'シェアしよう！'
+      view_new: 'さっそく見てみる！'
+      view_annotation: '※閲覧はアカウント登録不要です。'
+      procedure_1-1: '共有したくなるシーンを'
+      procedure_1-2: 'YouTubeで見つける'
+      procedure_2-1: 'お気に入りシーンを'
+      procedure_2-2: 'シーンコレクションとして'
+      procedure_2-3: '登録してシェアする'
+      procedure_2_annotation: '※シーンコレクション登録にはアカウント登録が必要です。'
+      speech_bubble_1: 'フォーム入力で'
+      speech_bubble_2: '簡単に登録！'
+      sample_heading: 'シーンコレクションイメージ'
+
+      how_to_use: 'さまざまな用途に使える'
+      to_share_heading: 'お気に入りシーンの共有に'
+      to_share_body: 'ゲーム配信などの長時間動画に対して共有したいシーンを登録し見どころを記載することができます。'
+      to_review_heading: '学習系動画の復習用に'
+      to_review_body: '長時間の学習系動画に対して後で見返したいシーンを登録すると手軽に復習することができます。'
+      to_learn_English_heading: 'YouTube動画を英語学習動画に'
+      to_learn_English_body: 'シーンの説明欄にスクリプトを記載することで、動画の好きなシーンで英語学習することができます。'
