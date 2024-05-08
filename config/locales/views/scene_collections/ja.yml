@@ -2,6 +2,8 @@ ja:
   scene_collections:
     new:
       page_heading: 'シーンコレクション作成'
+      tour_button-display: '作成ガイドを表示'
+      tour_button-hide: '作成ガイドを非表示'
     edit:
       page_heading: 'シーンコレクション編集'
       scene_add_button: 'シーン追加'
@@ -11,6 +13,8 @@ ja:
       create_cancel_button: 'キャンセル'
       update_cancel_button: 'キャンセル'
       scene_add_heading: 'お気に入りシーンの追加'
+      tour_button-display: '編集ガイドを表示'
+      tour_button-hide: '編集ガイドを非表示'
     show:
       favorite_scenes_heading: 'お気に入りシーン'
       short_description_heading: '簡単な説明'
@@ -18,6 +22,7 @@ ja:
       info_heading: '投稿情報'
     scene_index:
       destroy_confirm: '本当に削除しますか？'
+
     index:
       page_heading: 'シーンコレクション一覧'
       no_scene_collection: 'シーンコレクションがありません'
@@ -26,5 +31,6 @@ ja:
         short_description_cont_placeholder: '[簡単な説明]検索キーワード'
     my_index:
       page_heading: 'マイシーンコレクション一覧'
+      new_button: '新規投稿'
     cards:
       destroy_confirm: '本当に削除しますか？'

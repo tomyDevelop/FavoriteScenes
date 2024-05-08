@@ -7,6 +7,7 @@ ja:
     sidenav:
       home: 'ホーム'
       explore_scenecollections: 'シーンコレクションを探す'
+      new-scenecollections: 'シーンコレクション新規投稿'
       my-scenecollections: 'マイシーンコレクション'
       account: 'アカウント'
       terms-of-service: '利用規約'
