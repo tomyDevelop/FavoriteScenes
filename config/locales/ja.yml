@@ -112,6 +112,7 @@ ja:
         title: 'タイトル'
         short_description: '簡単な説明'
         category_id: 'カテゴリ'
+        category: 'カテゴリ'
       scene:
         seconds: '経過秒数'
         highlight: '見どころ'
