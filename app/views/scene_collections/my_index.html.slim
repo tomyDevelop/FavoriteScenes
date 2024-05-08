@@ -1,7 +1,9 @@
 .mx-auto.max-w-7xl.px-1.sm:px-2.lg:px-8
   .mx-auto.max-w-4xl.pb-2
-    h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900.mb-2.sm:mb-4
-      = t '.page_heading'
+    .flex.justify-between.items-center.sm:mb-4.mb-2
+      h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900
+        = t '.page_heading'
+      = link_to t('.new_button'), new_scene_collection_path, class: 'rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
 
     = render partial: 'scene_collections/search_form', locals: { search_path: my_scene_collections_path }
     = render partial: 'scene_collections/scene_collection', locals: { type: 'index', scene_collections: @scene_collections }

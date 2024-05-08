@@ -10,6 +10,11 @@
                 = t 'pages.sidenav.home', class: 'bg-cyan-700'
           - if logged_in?
             li
+              = link_to new_scene_collection_path, class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
+                = image_tag 'icons/new.svg', class: 'h-6 w-6'
+                .text-sm.my-auto
+                  = t 'pages.sidenav.new-scenecollections'
+            li
               = link_to my_scene_collections_path, class: 'flex items-center gap-x-4 p-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50' do
                 = image_tag 'icons/my-contents.svg', class: 'h-6 w-6'
                 .text-sm.my-auto
