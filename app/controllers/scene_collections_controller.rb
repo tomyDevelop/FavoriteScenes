@@ -87,6 +87,6 @@ class SceneCollectionsController < ApplicationController
   end
 
   def scene_collection_params
-    params.require(:scene_collection).permit(:video_id, :video_title, :channel_name, :title, :short_description, :category_id, :video_thumbnail_url)
+    params.require(:scene_collection).permit(:video_id, :video_title, :channel_name, :short_description, :category_id, :video_thumbnail_url)
   end
 end
