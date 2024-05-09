@@ -2,6 +2,8 @@ ja:
   users:
     new:
       page_heading: 'アカウント登録'
+    form:
+      placeholder: '例: tondev'
     show:
       page_heading: 'アカウント'
     account_info:

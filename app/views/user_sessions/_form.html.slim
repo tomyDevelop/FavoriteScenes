@@ -12,8 +12,8 @@
         .mt-2
           = f.password_field :password, class: 'block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
 
-      = f.submit 'ログイン', class: 'flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+      = f.submit 'ログイン', class: 'cursor-pointer flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
 
     p.mt-10.text-center.text-sm.text-gray-500
       = t 'user_sessions.form.not_a_member'
-      = link_to t('user_sessions.form.new_account'), new_user_path, class: 'font-semibold leading-6 text-indigo-600 hover:text-indigo-500'
+      = link_to t('user_sessions.form.new_account'), new_user_path, class: 'cursor-pointer font-semibold leading-6 text-indigo-600 hover:text-indigo-500'

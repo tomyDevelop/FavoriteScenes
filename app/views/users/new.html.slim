@@ -4,3 +4,7 @@
     h3.text-base.sm:text-lg.font-bold.leading-6.text-gray-900
       = t '.page_heading'
   = render @user
+
+script type='module'
+  | import init from 'controllers/user';
+  | init();

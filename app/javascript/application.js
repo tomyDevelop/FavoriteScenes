@@ -79,9 +79,11 @@ export const sideNavAccordion = function(e) {
 
   if (sideNav.getAttribute('aria-expanded') === 'false') {
     sideNav.classList.remove('hidden');
+    sideNav.classList.add('flex');
     sideNav.setAttribute('aria-expanded', 'true');
   } else {
     sideNav.classList.add('hidden');
+    sideNav.classList.remove('flex');
     sideNav.setAttribute('aria-expanded', 'false');
   }
 

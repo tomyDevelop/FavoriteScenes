@@ -6,6 +6,7 @@ ja:
     form:
       msg:
         validation_errors_count: 'エラーが%{errors_count}個あります。修正してください。'
+        pattern_match_validation_error: '最低文字数に達していない、もしくは利用できない文字列が含まれています。'
       optional: '任意'
       mandatory: '必須'
       button:
@@ -50,7 +51,7 @@ ja:
         success: 'アカウント登録に成功しました。続けてプロフィールを登録してください。'
         failed: 'アカウントの登録に失敗しました。'
       account_name:
-        caution_note: 'ログイン時に使用するIDで他のユーザーには表示されません。他のユーザーが利用しているIDは使用できません。半角英数字が使用できます。'
+        caution_note: 'ログイン時に使用するIDで他のユーザーには表示されません。他のユーザーが利用しているIDは使用できません。半角英数字とアンダースコア（_）が使用できます。'
       password:
         caution_note: '半角英数字と特定の記号（@, !, &, -）が使用できます。4桁以上である必要があります。'
   profiles:
@@ -74,7 +75,7 @@ ja:
   scene_collections:
     form:
       msg:
-        create_success: 'シーンコレクション作成に成功しました。'
+        create_success: 'シーンコレクション作成に成功しました。引き続きお気に入りシーンを追加してください！'
         create_failed: 'シーンコレクション作成に失敗しました。'
         update_success: 'シーンコレクション更新に成功しました。'
         update_failed: 'シーンコレクション更新に失敗しました。'
