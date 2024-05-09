@@ -13,23 +13,80 @@ html.h-full
       .fixed.w-full.z-50
         = render partial: '/shared/header'
       div
-        .fixed.top-28.sm:top-16.bottom-0.z-50.flex.w-72.flex-col id='side-nav' aria-expanded='true'
+        .fixed.top-28.sm:top-16.bottom-0.z-50.hidden.lg:flex.w-72.lg:flex-col id='side-nav' aria-expanded='true'
           = render partial: '/shared/sidenav'
         main.pt-28.sm:pt-16.lg:pl-72
           .px-4
             = render partial: '/shared/flash_messages'
             = yield
     script type='module'
-      | import { sideNavAccordion, subMenuAccordion } from 'application';
-      | document.addEventListener("turbo:load", function() {
-      |   const sidenavOpe = document.getElementById('sidenav-ope');
-      |   if (sidenavOpe) {
-      |     sidenavOpe.removeEventListener('click', sideNavAccordion);
-      |     sidenavOpe.addEventListener('click', sideNavAccordion);
-      |   }
-      |   const accordionMenu = document.getElementById('according-menu-1');
-      |   if (accordionMenu) {
-      |     accordionMenu.removeEventListener('click', subMenuAccordion);
-      |     accordionMenu.addEventListener('click', subMenuAccordion);
-      |   }
-      | });
+      |import { sideNavAccordion, subMenuAccordion } from 'application';
+      |let flashMessages;
+      |let errorMessage;
+      |const setupFlashMessage = function(flashMessage) {
+      |  setTimeout(function() {
+      |    flashMessage.style.opacity = 0;
+      |    setTimeout(function() {
+      |      flashMessage.remove();
+      |    }, 500);
+      |  }, 3000);
+      |};
+      |document.addEventListener("turbo:load", function() {
+      |  const sidenavOpe = document.getElementById('sidenav-ope');
+      |  if (sidenavOpe) {
+      |    sidenavOpe.removeEventListener('click', sideNavAccordion);
+      |    sidenavOpe.addEventListener('click', sideNavAccordion);
+      |  }
+      |  const accordionMenu = document.getElementById('according-menu-1');
+      |  if (accordionMenu) {
+      |    accordionMenu.removeEventListener('click', subMenuAccordion);
+      |    accordionMenu.addEventListener('click', subMenuAccordion);
+      |  }
+      |  const sidenav = document.getElementById('side-nav');
+      |  function updateAriaExpanded() {
+      |    const screenWidth = window.innerWidth;
+      |    sidenav.setAttribute('aria-expanded', screenWidth < 1024 ? 'false' : 'true');
+      |  }
+      |  updateAriaExpanded();
+      |  window.addEventListener('resize', updateAriaExpanded);
+      |});
+      |document.addEventListener('turbo:frame-load', function() {  
+      |  setTimeout(function() {
+      |    flashMessages = document.querySelectorAll('.flash_message');
+      |    if (flashMessages) {
+      |      flashMessages.forEach(function(flashMessage) {
+      |        setupFlashMessage(flashMessage);
+      |      });
+      |    }
+      |  }, 2000);
+      |});
+      |document.addEventListener('turbo:render', function() {  
+      |  setTimeout(function() {
+      |    flashMessages = document.querySelectorAll('.flash_message');
+      |    if (flashMessages) {
+      |      flashMessages.forEach(function(flashMessage) {
+      |        setupFlashMessage(flashMessage);
+      |      });
+      |    }
+      |  }, 2000);
+      |});
+      |document.addEventListener('turbo:before-stream-render', function() {  
+      |  setTimeout(function() {
+      |    flashMessages = document.querySelectorAll('.flash_message');
+      |    if (flashMessages) {
+      |      flashMessages.forEach(function(flashMessage) {
+      |        setupFlashMessage(flashMessage);
+      |      });
+      |    }
+      |  }, 2000);
+      |});
+      |document.addEventListener('DOMContentLoaded', function() {
+      |  setTimeout(function() {
+      |    flashMessages = document.querySelectorAll('.flash_message');
+      |    if (flashMessages) {
+      |      flashMessages.forEach(function(flashMessage) {
+      |        setupFlashMessage(flashMessage);
+      |      });
+      |    }
+      |  }, 2000);
+      |});

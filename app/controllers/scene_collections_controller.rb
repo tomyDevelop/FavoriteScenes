@@ -53,17 +53,17 @@ class SceneCollectionsController < ApplicationController
     @scene_collection = SceneCollection.find(params[:id])
     @scenes = @scene_collection.scenes.order('seconds')
     @comment = @scene_collection.comments.build
-    @comments = @scene_collection.comments.order('created_at DESC')
+    @comments = @scene_collection.comments.includes(user: :profile).order('created_at DESC')
   end
 
   def index
     @q =SceneCollection.ransack(params[:q])
-    @scene_collections = @q.result.order('created_at DESC')
+    @scene_collections = @q.result.includes(:category, user: :profile).order('created_at DESC')
   end
 
   def my_index
     @q =SceneCollection.ransack(params[:q])
-    @scene_collections = @q.result.where(user_id: current_user.id).order('created_at DESC')
+    @scene_collections = @q.result.where(user_id: current_user.id).includes(:category, user: :profile).order('created_at DESC')
   end
 
   def destroy
