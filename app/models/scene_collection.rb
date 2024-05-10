@@ -6,6 +6,10 @@ class SceneCollection < ApplicationRecord
 
   validates :video_id,
     presence: true
+  validates :video_title,
+    presence: true
+  validates :channel_name,
+    presence: true
   validates :short_description,
     presence: true,
     length: { maximum: 400 }

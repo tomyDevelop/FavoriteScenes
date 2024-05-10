@@ -5,7 +5,8 @@ ja:
       tour_button-display: '作成ガイドを表示'
       tour_button-hide: '作成ガイドを非表示'
       annotation_heading: '注意'
-      annotation_body: '映画やテレビ、アニメの無断転載など、著作権違反のYouTubu動画は登録しないようお願いします。'
+      annotation_body: '映画やテレビ、アニメの無断転載など、著作権違反のYouTube動画は登録しないようお願いします。'
+      annotation_body_2: 'クリエイターをリスペクトし、誹謗中傷や批判などの表現はなしでお願いします。'
     edit:
       page_heading: 'シーンコレクション編集'
       scene_add_button: 'シーン追加'
@@ -22,7 +23,8 @@ ja:
       short_description_heading: '簡単な説明'
       comments_heading: 'コメント'
       info_heading: '投稿情報'
-      annotation: 'もし動画が表示されない場合、お手数ですが画面リロードお願いします。'
+      annotation: 'もし動画が表示されない場合、お手数ですが画面リロードを試行してください。'
+      xshare: 'Xでシェア'
     scene_index:
       destroy_confirm: '本当に削除しますか？'
 
