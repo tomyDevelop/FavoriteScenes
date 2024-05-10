@@ -1,4 +1,4 @@
 = turbo_stream.update 'scenes'
-  = render 'scenes/index', action: 'create'
+  = render 'scenes/index', action: 'create', scenes: @scenes
 = turbo_stream.replace 'new_scene'
   = render 'scenes/new_button'

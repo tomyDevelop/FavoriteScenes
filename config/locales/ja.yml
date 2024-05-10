@@ -38,12 +38,9 @@ ja:
         tool_tip_scene_highlight1: '伝えたい見どころを自由に記載してください！'
         tool_tip_scene_seconds_1: 'お気に入りシーンの開始時間（秒）を指定してください！'
         tool_tip_scene_seconds_2: '上記の時間を入力すると秒に自動計算されます。'
-        tool_tip_scene_seconds_edit_1: '経過時間は編集できません。'
-        tool_tip_scene_seconds_edit_2: '編集したい場合は、シーンを再作成してください。'
         tool_tip_new_scene_collection_heading_1: 'このページでは基本情報を登録し、'
         tool_tip_new_scene_collection_heading_2: 'ベースとなるシーンコレクションを作成します。'
-        tool_tip_edit_scene_collection_heading_1: 'このページでは基本情報の編集と、'
-        tool_tip_edit_scene_collection_heading_2: 'シーンの追加、削除、編集ができます。'
+        tool_tip_edit_scene_collection_heading_1: 'このページでは基本情報の編集ができます。'
 
   users:
     form:

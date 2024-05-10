@@ -21,16 +21,8 @@ html.h-full
             = yield
     script type='module'
       |import { sideNavAccordion, subMenuAccordion } from 'application';
+      |import setupFlashMessage from 'controllers/flash_fadeout';
       |let flashMessages;
-      |let errorMessage;
-      |const setupFlashMessage = function(flashMessage) {
-      |  setTimeout(function() {
-      |    flashMessage.style.opacity = 0;
-      |    setTimeout(function() {
-      |      flashMessage.remove();
-      |    }, 500);
-      |  }, 3000);
-      |};
       |document.addEventListener("turbo:load", function() {
       |  const sidenavOpe = document.getElementById('sidenav-ope');
       |  if (sidenavOpe) {
@@ -61,16 +53,6 @@ html.h-full
       |  }, 2000);
       |});
       |document.addEventListener('turbo:render', function() {  
-      |  setTimeout(function() {
-      |    flashMessages = document.querySelectorAll('.flash_message');
-      |    if (flashMessages) {
-      |      flashMessages.forEach(function(flashMessage) {
-      |        setupFlashMessage(flashMessage);
-      |      });
-      |    }
-      |  }, 2000);
-      |});
-      |document.addEventListener('turbo:before-stream-render', function() {  
       |  setTimeout(function() {
       |    flashMessages = document.querySelectorAll('.flash_message');
       |    if (flashMessages) {

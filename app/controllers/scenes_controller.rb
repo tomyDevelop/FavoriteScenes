@@ -11,7 +11,7 @@ class ScenesController < ApplicationController
     @scenes = @scene_collection.scenes.order('seconds')
     authorize @scene_collection
     if @scene.save
-      @scene = @scene_collection.scenes.build
+      @scenes.reload
       flash.now[:notice] = 'シーンを追加しました。'
       render :create
     else

@@ -42,7 +42,7 @@ class SceneCollectionsController < ApplicationController
     @scenes = @scene_collection.scenes.order('seconds')
     authorize @scene_collection
     if @scene_collection.update(scene_collection_params)
-      redirect_to scene_collection_path(@scene_collection.id), notice: t('scene_collections.form.msg.update_success')
+      redirect_to my_scene_collections_path, notice: t('scene_collections.form.msg.update_success')
     else
       flash.now[:alert] = t 'scene_collections.form.msg.update_failed'
       render :edit, status: :unprocessable_entity
