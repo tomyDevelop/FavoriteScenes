@@ -22,7 +22,7 @@ class SceneCollectionsController < ApplicationController
     else
       @scene_collection = current_user.scene_collections.build(scene_collection_params)
       if @scene_collection.save
-        redirect_to edit_scene_collection_path(@scene_collection.id), notice: t('scene_collections.form.msg.create_success')
+        redirect_to scene_collection_path(@scene_collection), notice: t('scene_collections.form.msg.create_success')
       else
         flash.now[:alert] = t 'scene_collections.form.msg.create_failed'
         render :new, status: :unprocessable_entity

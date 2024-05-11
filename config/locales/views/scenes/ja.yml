@@ -18,7 +18,7 @@ ja:
       tour_button-scene-display: 'シーンガイドを表示'
       tour_button-scene-hide: 'シーンガイドを非表示'
       annotation: '時間ボタンを押下すると、その時間から再生します。ボタンが効かない場合、お手数ですが画面リロードを試行してください。'
-      no_scenes: 'シーンは1件もありません。'
+      no_scenes: '追加されたシーンは1件もありません。'
     show:
       scene_unit:
         destroy_confirm: '本当に削除しますか？'
